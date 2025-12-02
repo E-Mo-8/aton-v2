@@ -54,7 +54,7 @@ export default function Market() {
             <p className="text-xl font-bold">{nft.name}</p>
             <p className="text-gray-400">{nft.description}</p>
             <p className="text-xl font-bold mt-2">{nft.price} MATIC</p>
-            <button onClick={() => buyNft(nft)} className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">Buy</button>
+            <button onClick={() => buyNft(nft)} className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 cursor-pointer">Buy</button>
           </div>
         ))}
       </div>

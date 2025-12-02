@@ -86,7 +86,7 @@ export default function Dashboard() {
             <p className="text-xl font-bold">{nft.name}</p>
             <p className="text-gray-400">{nft.description}</p>
             <p className="text-xl font-bold mt-2">{nft.price} MATIC</p>
-            <button onClick={() => buyNft(nft)} className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">Buy Now</button>
+            <button onClick={() => buyNft(nft)} className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 cursor-pointer">Buy Now</button>
           </div>
         ))}
       </div>
@@ -99,7 +99,7 @@ export default function Dashboard() {
             <img src={nft.image} className="rounded mb-2 h-48 w-full object-cover" />
             <p className="text-xl font-bold">{nft.name}</p>
             <p className="text-gray-400">{nft.description}</p>
-            <button onClick={() => resellNft(nft)} className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">Resell</button>
+            <button onClick={() => resellNft(nft)} className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 cursor-pointer">Resell</button>
           </div>
         ))}
       </div>

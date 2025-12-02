@@ -1,19 +1,30 @@
-[00:00:01.132] Server  LOG      ✓ Ready in 765ms
-[00:00:07.937] Server  LOG      ○ Compiling /market ...
-[00:00:09.888] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:10.034] Browser LOG     --- DEBUG ADMIN CHECK ---
-[00:00:10.034] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
-[00:00:10.034] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
-[00:00:10.034] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
-[00:01:58.036] Server  LOG      ✓ Compiled in 822ms
-[00:01:58.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:58.700] Server  LOG      ✓ Compiled in 609ms
-[00:01:59.227] Browser LOG     --- DEBUG ADMIN CHECK ---
-[00:01:59.227] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
-[00:01:59.227] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
-[00:01:59.227] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
-[00:02:06.064] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:06.198] Browser LOG     --- DEBUG ADMIN CHECK ---
-[00:02:06.198] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
-[00:02:06.198] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
-[00:02:06.198] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
+[00:00:01.129] Server  LOG      ✓ Ready in 783ms
+[00:00:11.034] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.151] Browser LOG     --- DEBUG ADMIN CHECK ---
+[00:00:11.151] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:00:11.151] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:00:11.151] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
+[00:00:49.337] Server  LOG      ✓ Compiled in 62ms
+[00:00:51.719] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:51.869] Browser LOG     --- DEBUG ADMIN CHECK ---
+[00:00:51.869] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:00:51.869] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:00:51.869] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
+[00:02:01.889] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:02.045] Browser LOG     --- DEBUG ADMIN CHECK ---
+[00:02:02.045] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:02:02.045] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:02:02.045] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
+[00:02:05.322] Browser LOG     --- DEBUG ADMIN CHECK ---
+[00:02:05.322] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:02:05.322] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:02:05.322] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
+[00:02:06.751] Browser LOG     --- DEBUG ADMIN CHECK ---
+[00:02:06.751] Browser LOG     1. Connected Wallet: 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:02:06.751] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:02:06.751] Browser LOG     ✅ SUCCESS: Addresses Match. Setting Admin to TRUE.
+[00:02:19.834] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:19.973] Browser LOG     --- DEBUG ADMIN CHECK ---
+[00:02:19.973] Browser LOG     1. Connected Wallet: 0xe08ac02cffc24a7fe8d983dba69616b13113cd8d
+[00:02:19.973] Browser LOG     2. Env Var Address : 0xc4e0ea6e05296d3a03fee533092c2e08416ca9c6
+[00:02:19.973] Browser LOG     ❌ FAIL: Addresses do not match.

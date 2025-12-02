@@ -134,8 +134,8 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/client/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/client/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__ = __turbopack_context__.i("[project]/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__ = __turbopack_context__.i("[project]/client/node_modules/ethers/lib.esm/ethers.js [app-ssr] (ecmascript) <export * as ethers>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/client/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/client/config.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$AtonMarketplace$2e$json__$28$json$29$__ = __turbopack_context__.i("[project]/client/context/AtonMarketplace.json (json)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$WalletContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/client/context/WalletContext.tsx [app-ssr] (ecmascript)");
@@ -158,16 +158,16 @@ function Dashboard() {
         currentAccount
     ]);
     async function loadNFTs() {
-        const provider = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].BrowserProvider(window.ethereum);
+        const provider = new __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].BrowserProvider(window.ethereum);
         const signer = await provider.getSigner();
-        const contract = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].Contract(__TURBOPACK__imported__module__$5b$project$5d2f$client$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contractAddress"], __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$AtonMarketplace$2e$json__$28$json$29$__["default"].abi, signer);
+        const contract = new __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].Contract(__TURBOPACK__imported__module__$5b$project$5d2f$client$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contractAddress"], __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$AtonMarketplace$2e$json__$28$json$29$__["default"].abi, signer);
         // 1. Fetch Market Items (Find ones assigned to me)
         const data = await contract.fetchMarketItems();
         const assignedItems = await Promise.all(data.map(async (i)=>{
             if (i.designatedBuyer.toLowerCase() === currentAccount.toLowerCase() && !i.isResale) {
                 const tokenUri = await contract.tokenURI(i.tokenId);
-                const meta = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(tokenUri);
-                let price = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].formatUnits(i.price.toString(), "ether");
+                const meta = await __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(tokenUri);
+                let price = __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].formatUnits(i.price.toString(), "ether");
                 return {
                     price,
                     tokenId: Number(i.tokenId),
@@ -184,8 +184,8 @@ function Dashboard() {
         const myData = await contract.fetchMyNFTs();
         const myItems = await Promise.all(myData.map(async (i)=>{
             const tokenUri = await contract.tokenURI(i.tokenId);
-            const meta = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(tokenUri);
-            let price = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].formatUnits(i.price.toString(), "ether");
+            const meta = await __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(tokenUri);
+            let price = __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].formatUnits(i.price.toString(), "ether");
             return {
                 price,
                 tokenId: Number(i.tokenId),
@@ -200,10 +200,10 @@ function Dashboard() {
         setLoading(false);
     }
     async function buyNft(nft) {
-        const provider = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].BrowserProvider(window.ethereum);
+        const provider = new __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].BrowserProvider(window.ethereum);
         const signer = await provider.getSigner();
-        const contract = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].Contract(__TURBOPACK__imported__module__$5b$project$5d2f$client$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contractAddress"], __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$AtonMarketplace$2e$json__$28$json$29$__["default"].abi, signer);
-        const price = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].parseUnits(nft.price, "ether");
+        const contract = new __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].Contract(__TURBOPACK__imported__module__$5b$project$5d2f$client$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contractAddress"], __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$AtonMarketplace$2e$json__$28$json$29$__["default"].abi, signer);
+        const price = __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].parseUnits(nft.price, "ether");
         const transaction = await contract.buyFirstHand(nft.tokenId, {
             value: price
         });
@@ -213,13 +213,13 @@ function Dashboard() {
     async function resellNft(nft) {
         const price = window.prompt("Enter resale price in MATIC");
         if (!price) return;
-        const provider = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].BrowserProvider(window.ethereum);
+        const provider = new __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].BrowserProvider(window.ethereum);
         const signer = await provider.getSigner();
-        const contract = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].Contract(__TURBOPACK__imported__module__$5b$project$5d2f$client$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contractAddress"], __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$AtonMarketplace$2e$json__$28$json$29$__["default"].abi, signer);
+        const contract = new __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].Contract(__TURBOPACK__imported__module__$5b$project$5d2f$client$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contractAddress"], __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$context$2f$AtonMarketplace$2e$json__$28$json$29$__["default"].abi, signer);
         // Check if contract is approved to move token
         // (Skipping detailed check for brevity, just approving always or catching error)
         // await contract.approve(contractAddress, nft.tokenId); // Standard ERC721
-        const priceFormatted = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].parseUnits(price, "ether");
+        const priceFormatted = __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$ethers$2f$lib$2e$esm$2f$ethers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__ethers$3e$__["ethers"].parseUnits(price, "ether");
         let transaction = await contract.resellToken(nft.tokenId, priceFormatted);
         await transaction.wait();
         loadNFTs();
@@ -290,7 +290,7 @@ function Dashboard() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: ()=>buyNft(nft),
-                                className: "w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4",
+                                className: "w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 cursor-pointer",
                                 children: "Buy Now"
                             }, void 0, false, {
                                 fileName: "[project]/client/app/dashboard/page.tsx",
@@ -347,7 +347,7 @@ function Dashboard() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$client$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: ()=>resellNft(nft),
-                                className: "w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4",
+                                className: "w-full bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 cursor-pointer",
                                 children: "Resell"
                             }, void 0, false, {
                                 fileName: "[project]/client/app/dashboard/page.tsx",
