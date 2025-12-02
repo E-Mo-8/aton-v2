@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Balora/Projects/aton-v2/client/app/page.tsx"],"sourcesContent":["\"use client\";\nimport { useContext } from \"react\";\nimport { WalletContext } from \"@/context/WalletContext\";\n\nexport default function Home() {\n  const { connectWallet, currentAccount } = useContext(WalletContext);\n\n  return (\n    <div className=\"flex flex-col items-center justify-center mt-20 text-center\">\n      <h1 className=\"text-5xl font-bold mb-6 text-blue-400\">Welcome to Aton Market</h1>\n      <p className=\"text-xl text-slate-500 mb-8 max-w-2xl\">\n        The exclusive Aton marketplace on Polygon (Amoy). \n        Admins mint, Users buy items, and anyone can trade on the secondary market.\n      </p>\n      {!currentAccount && (\n        <button onClick={connectWallet} className=\"bg-blue-600 text-xl px-8 py-3 rounded-full hover:bg-blue-700 cursor-pointer\">\n          Connect Wallet to Begin\n        </button>\n      )}\n    </div>\n  );\n}"],"names":[],"mappings":";;;;;AACA;AACA;AAFA;;;;AAIe,SAAS;IACtB,MAAM,EAAE,aAAa,EAAE,cAAc,EAAE,GAAG,IAAA,6NAAU,EAAC,oJAAa;IAElE,qBACE,wPAAC;QAAI,WAAU;;0BACb,wPAAC;gBAAG,WAAU;0BAAwC;;;;;;0BACtD,wPAAC;gBAAE,WAAU;0BAAwC;;;;;;YAIpD,CAAC,gCACA,wPAAC;gBAAO,SAAS;gBAAe,WAAU;0BAA8E;;;;;;;;;;;;AAMhI"}}]
-}
