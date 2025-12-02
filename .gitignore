@@ -1,0 +1,28 @@
+# Dependencies (Root and Client)
+node_modules/
+
+# Environment Variables (CRITICAL)
+.env
+.env.local
+.env.*
+client/.env
+client/.env.local
+
+# Hardhat
+cache/
+artifacts/
+typechain/
+typechain-types/
+coverage/
+coverage.json
+ignition/deployments/chain-31337
+
+# Next.js / Client
+client/.next/
+client/out/
+client/build/
+client/dist/
+
+# System
+.DS_Store
+Thumbs.db
